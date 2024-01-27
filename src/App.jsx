@@ -22,42 +22,40 @@ export default function App() {
   const divStyle = {
     padding: "10px",
   };
-
+  
   return (
-    <div>
+    <form action="submit" onSubmit={handleSubmit}>
       <h1>Full Name Display</h1>
-      <form action="submit" >
-        <div>
-          <label htmlFor="firstName">
-            First Name:{" "}
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              onChange={handleChange}
-              required
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="lastName">
-            Last Name:{" "}
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              onChange={handleChange}
-              required
-            />
-          </label>
-        </div>
-        <button onSubmit={handleSubmit}>Submit</button>
-      </form>
+      <div>
+        <label htmlFor="firstName">
+          First Name:{" "}
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            onChange={handleChange}
+            required
+          />
+        </label>
+      </div>
+      <div>
+        <label htmlFor="lastName">
+          Last Name:{" "}
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            onChange={handleChange}
+            required
+          />
+        </label>
+      </div>
+      <button>Submit</button>
       <div style={divStyle}>
         {isSubmit
           ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
           : ""}
       </div>
-    </div>
+    </form>
   );
 }
