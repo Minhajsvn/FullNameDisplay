@@ -24,6 +24,7 @@ export default function App() {
   };
 
   return (
+    <div>
     <form action="submit" onSubmit={handleSubmit}>
       <h1>Full Name Display</h1>
       <div>
@@ -51,11 +52,12 @@ export default function App() {
         </label>
       </div>
       <button type="submit">Submit</button>
-      <div style={divStyle}>
-        {isSubmit
-          ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
-          : ""}
-      </div>
     </form>
+    <div style={divStyle}>
+    {isSubmit
+      ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
+      : ""}
+  </div>
+  </div>
   );
 }
