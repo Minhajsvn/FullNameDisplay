@@ -22,11 +22,11 @@ export default function App() {
   const divStyle = {
     padding: "10px",
   };
-  
+
   return (
     <div>
       <h1>Full Name Display</h1>
-      <form action="submit" onSubmit={handleSubmit}>
+      <form action="submit" >
         <div>
           <label htmlFor="firstName">
             First Name:{" "}
@@ -51,7 +51,7 @@ export default function App() {
             />
           </label>
         </div>
-        <button>Submit</button>
+        <button onSubmit={handleSubmit}>Submit</button>
       </form>
       <div style={divStyle}>
         {isSubmit
