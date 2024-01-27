@@ -53,11 +53,11 @@ export default function App() {
       </div>
       <button type="submit">Submit</button>
     </form>
-    <div style={divStyle}>
     {isSubmit
-      ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
+      ? <div style={divStyle}>
+            `Full Name: ${fullName.firstName} ${fullName.lastName}`
+        </div>
       : ""}
-  </div>
   </div>
   );
 }
