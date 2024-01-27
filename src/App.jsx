@@ -20,7 +20,7 @@ export default function App() {
   };
 
   const divStyle = {
-    padding: "10px",
+    paddingTop: "10px",
   };
 
   return (
@@ -50,7 +50,7 @@ export default function App() {
           />
         </label>
       </div>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
       <div style={divStyle}>
         {isSubmit
           ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
