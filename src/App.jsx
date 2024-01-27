@@ -22,13 +22,13 @@ export default function App() {
   const divStyle = {
     padding: "10px",
   };
-  
+
   return (
     <form action="submit" onSubmit={handleSubmit}>
       <h1>Full Name Display</h1>
       <div>
         <label htmlFor="firstName">
-          First Name:{" "}
+          First Name:
           <input
             type="text"
             id="firstName"
@@ -40,7 +40,7 @@ export default function App() {
       </div>
       <div>
         <label htmlFor="lastName">
-          Last Name:{" "}
+          Last Name:
           <input
             type="text"
             id="lastName"
