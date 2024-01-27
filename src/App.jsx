@@ -55,7 +55,7 @@ export default function App() {
     </form>
     {isSubmit
       ? <div style={divStyle}>
-            `Full Name: ${fullName.firstName} ${fullName.lastName}`
+            {`Full Name: ${fullName.firstName} ${fullName.lastName}`}
         </div>
       : ""}
   </div>
