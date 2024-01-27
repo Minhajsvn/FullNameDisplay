@@ -1,0 +1,63 @@
+import { useState } from "react";
+
+export default function App() {
+  const [fullName, setFullName] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleChange = (e) => {
+    let value = e.target.value;
+    setFullName({
+      ...fullName,
+      [e.target.name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (fullName.firstName !== undefined && fullName.lastName !== undefined) {
+      setIsSubmit(true);
+    }
+  };
+
+  const divStyle = {
+    padding: "10px",
+  };
+  
+  return (
+    <div>
+      <h1>Full Name Display</h1>
+      <form action="submit" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">
+            First Name:{" "}
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="lastName">
+            Last Name:{" "}
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <button>Submit</button>
+      </form>
+      <div style={divStyle}>
+        {isSubmit
+          ? `Full Name: ${fullName.firstName} ${fullName.lastName}`
+          : ""}
+      </div>
+    </div>
+  );
+}
